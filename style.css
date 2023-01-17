@@ -1,0 +1,211 @@
+/* FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;800&family=Playfair+Display:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap");
+
+:root {
+  --primary-color: #8653a0;
+  --first-heading: "Playfair Display", serif; /*removed*/
+  --second-heading: "Indie Flower", cursive;
+  --paragraph: "Nanum Myeongjo", serif;
+  --bg-color: #f1f1f1;
+}
+
+body {
+  font-weight: 400;
+  color: #222;
+  background: var(--bg-color);
+  font-family: "Lato", sans-serif;
+  margin: 0;
+}
+
+a {
+  color: var(--primary-color);
+}
+
+header {
+  text-align: center;
+}
+
+header img {
+  margin-top: 50px;
+  width: 180px;
+  border-radius: 50%;
+  background: url(./media/pfpbg.png);
+  border: 5px solid #fff;
+  background-position: center;
+}
+
+h1 {
+  font-weight: lighter;
+  font-size: 50px;
+  font-size: 2.5rem;
+  margin: 0;
+  margin-top: 0.15em;
+  font-family: "Caveat", cursive;
+}
+
+header h2 {
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 0.7;
+  font-family: var(--second-heading);
+  color: var(--primary-color);
+  font-family: "Caveat", cursive;
+  margin-top: 1em;
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+  background-color: grey;
+  display: inline-block;
+  color: white;
+  padding: 0.2em;
+  background: var(--primary-color);
+}
+
+article:not(:nth-child(1)) h3 {
+  margin-top: 3em;
+}
+
+p,
+li {
+  line-height: 1.5;
+  font-family: var(--paragraph);
+  font-size: 1.3rem;
+}
+
+ul li {
+  list-style: none;
+}
+
+li + li {
+  margin-top: 1em;
+}
+
+ul li::before {
+  content: "\25A0";
+  font-size: 0.8rem;
+  margin-right: 0.5em;
+  color: var(--primary-color);
+  display: inline-block;
+}
+
+ul li:hover a {
+	opacity: .6;
+}
+
+section {
+  margin: 30px;
+}
+
+main {
+  max-width: 800px;
+  margin: 60px auto;
+}
+
+.project-link {
+  padding: 0.6em;
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+.project-link {
+  background: var(--primary-color);
+  color: white;
+}
+
+.project-link + .project-link {
+  margin-left: 1em;
+  background: none;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.project-link:hover,
+.project-link:focus {
+  box-shadow: 0 0 7px gray;
+}
+
+.project-link:active {
+  margin-top: 0.3em;
+}
+
+.social-links a {
+  font-size: 25px;
+  padding: 0px 8px;
+  text-decoration: none;
+  color: #444;
+}
+
+.social-links a:hover,
+.social-links a:focus {
+  color: var(--primary-color);
+}
+
+.social-footer {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.gif {
+  max-width: 90%;
+  margin-top: 0.5em;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 40rem) {
+  ul {
+    padding-left: 0;
+  }
+
+  section {
+    margin: 10px;
+  }
+
+  section:not(.social-links) {
+    padding: 0 1em;
+  }
+
+  .project-links {
+    width: 100%;
+    text-align: center;
+  }
+
+  .heading {
+    text-align: center;
+    background: lightgray;
+    border-radius: 20px;
+  }
+}
+
+@media (min-width: 40rem) {
+  .projects,
+  .about {
+    display: flex;
+  }
+
+  .heading {
+    min-width: 20%;
+    border-right: 5px solid var(--primary-color);
+    padding-left: 1.3em;
+  }
+
+  .wrapper {
+    margin-left: 1.5em;
+  }
+
+  header img {
+    width: 220px;
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin-top: 0.3em;
+  }
+
+  header h2 {
+    font-size: 1.2rem;
+  }
+}
